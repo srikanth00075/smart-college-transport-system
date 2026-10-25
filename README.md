@@ -1,4 +1,4 @@
-# 🚌 Smart College Transport Management System (CS23304)
+# 🚌 Smart College Transport Management System 
 
 An enterprise-grade, comprehensive Java application for college bus fleet management, student seat allocations, driver telemetry, attendance tracking, grievance redressal, and automated broadcast notices.
 
@@ -11,39 +11,39 @@ SmartCollegeTransport/
 │   └── transport.sql              # Relational MySQL DDL & initial mock data
 │
 ├── src/
-│   ├── Main.java                  # Application Bootstrap & Swing GUI entry
+│   ├── Main.java                  
 │   │
-│   ├── model/                     # Unit 1 & Unit 2: Object-Oriented Domain Models
-│   │   ├── Loginable.java         # Interface for authentication contract
-│   │   ├── Trackable.java         # Interface for geolocation updates
-│   │   ├── User.java              # Abstract Superclass (Implements Loginable, Serializable)
-│   │   ├── Student.java           # Subclass (Extends User, implements Trackable)
-│   │   ├── Driver.java            # Subclass (Extends User)
-│   │   ├── Admin.java             # Subclass (Extends User)
-│   │   ├── Bus.java               # Bus entity with seat tracking & capacity enforcement
-│   │   ├── Route.java             # Route entity with timetable & ordered stops
-│   │   ├── Complaint.java         # Student grievance model with resolution workflow
-│   │   ├── AttendanceRecord.java  # Boarding record with Date/Time API
-│   │   └── Announcement.java      # Broadcast notice entity
+│   ├── model/                     
+│   │   ├── Loginable.java         
+│   │   ├── Trackable.java        
+│   │   ├── User.java              
+│   │   ├── Student.java           
+│   │   ├── Driver.java            
+│   │   ├── Admin.java             
+│   │   ├── Bus.java               
+│   │   ├── Route.java             
+│   │   ├── Complaint.java         
+│   │   ├── AttendanceRecord.java  
+│   │   └── Announcement.java      
 │   │
-│   ├── exception/                 # Unit 3: User-defined Custom Exceptions
+│   ├── exception/                 
 │   │   ├── BusFullException.java
 │   │   ├── InvalidLoginException.java
 │   │   └── InvalidRouteException.java
 │   │
-│   ├── database/                  # Unit 5: JDBC Integration
-│   │   └── DBConnection.java      # MySQL Connection Manager with resilient fallback
+│   ├── database/                  
+│   │   └── DBConnection.java      
 │   │
-│   ├── service/                   # Core Business Logic & Algorithms
-│   │   ├── LoginService.java      # Credential verification & registration
-│   │   ├── BusService.java        # Fleet management & overloaded search algorithms
-│   │   ├── RouteService.java      # Route traversal & stop validation
-│   │   ├── AttendanceService.java # Boarding logs & percentage calculations
-│   │   ├── ComplaintService.java  # Student grievances & admin remark updates
-│   │   ├── NotificationService.java # Unit 3: Multithreaded background daemon
-│   │   └── DataPersistenceService.java # Unit 4: File I/O & Object Serialization
+│   ├── service/                   
+│   │   ├── LoginService.java      
+│   │   ├── BusService.java        
+│   │   ├── RouteService.java      
+│   │   ├── AttendanceService.java 
+│   │   ├── ComplaintService.java 
+│   │   ├── NotificationService.java 
+│   │   └── DataPersistenceService.java 
 │   │
-│   ├── gui/                       # Unit 5: Swing Desktop Interface
+│   ├── gui/                       #  Swing Desktop Interface
 │   │   ├── UIUtils.java           # Color palette, buttons, card borders & styles
 │   │   ├── LoginFrame.java        # Gateway with role toggles & 1-click viva demo fillers
 │   │   ├── StudentDashboard.java  # Student portal with registration workflow
