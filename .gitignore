@@ -1,0 +1,17 @@
+# Compiled Class files
+bin/
+*.class
+
+# Log files & test artifacts
+*.log
+test_*.csv
+test_*.txt
+test_*.ser
+
+# IDE configurations
+.idea/
+*.iml
+.vscode/
+.project
+.classpath
+.settings/
