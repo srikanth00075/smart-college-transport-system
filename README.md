@@ -2,37 +2,6 @@
 
 An enterprise-grade, comprehensive Java application for college bus fleet management, student seat allocations, driver telemetry, attendance tracking, grievance redressal, and automated broadcast notices.
 
-This project is tailored specifically for the **CS23304: Advanced Java Programming** curriculum, demonstrating clean design patterns and ensuring **all 5 units of Java** appear naturally.
-
----
-
-## 📑 CS23304 Syllabus Mapping (Units 1 - 5)
-
-| Unit | Syllabus Topic | Where & How It Is Used in This Project | Source File(s) |
-|---|---|---|---|
-| **Unit 1** | **Classes & Objects** | Real-world entity modeling (`Student`, `Driver`, `Admin`, `Bus`, `Route`, `Complaint`, `AttendanceRecord`) | `model/*.java` |
-| **Unit 1** | **Constructors & `this`** | Default, overloaded, and parameterized constructors using `this` and `super` chaining | `model/User.java`, `model/Student.java`, `model/Bus.java` |
-| **Unit 1** | **`static` Members** | Auto-incrementing synchronized ID generators (`generateNextId()`) and system constants | `model/User.java`, `model/Complaint.java` |
-| **Unit 1** | **String & Date/Time API** | Formatted timetables, bus schedules, and timestamps using `LocalDate`, `LocalTime`, `LocalDateTime`, `DateTimeFormatter` | `model/Route.java`, `model/AttendanceRecord.java`, `model/Announcement.java` |
-| **Unit 2** | **Inheritance** | Hierarchical inheritance: abstract `User` superclass extended by `Student`, `Driver`, and `Admin` | `model/User.java`, `model/Student.java`, `model/Driver.java`, `model/Admin.java` |
-| **Unit 2** | **Abstract Classes** | Abstract base class `User` with abstract polymorphic contract `displayDashboardInfo()` | `model/User.java` |
-| **Unit 2** | **Interfaces** | Multiple interface contracts: `Loginable` (authentication) and `Trackable` (live location updates) | `model/Loginable.java`, `model/Trackable.java` |
-| **Unit 2** | **Method Overloading** | Overloaded search variations in services: `searchBus(String)`, `searchBus(int routeId)`, `searchBus(int seats, boolean active)`, `searchRoute(int)`, `searchRoute(String)` | `service/BusService.java`, `service/RouteService.java` |
-| **Unit 2** | **Method Overriding** | Subclasses override `getRole()`, `displayDashboardInfo()`, `toString()` | `model/Student.java`, `model/Driver.java` |
-| **Unit 2** | **Packages** | Clean multi-package architecture: `model`, `service`, `exception`, `database`, `gui`, `test` | `src/*` |
-| **Unit 3** | **Exception Handling** | `try`, `catch`, `finally`, `throw`, `throws` for validation & error bounds | `service/LoginService.java`, `gui/LoginFrame.java` |
-| **Unit 3** | **User-Defined Exceptions** | Custom checked exceptions: `BusFullException`, `InvalidLoginException`, `InvalidRouteException` | `exception/*.java` |
-| **Unit 3** | **Multithreading** | Background Daemon Thread (`NotificationService extends Thread`) simulating live bus GPS tracking and broadcasting notices | `service/NotificationService.java` |
-| **Unit 4** | **Collections Framework** | `ArrayList` for dynamic records, `LinkedHashMap` for fast key-value lookups, `HashSet` to eliminate duplicate seat registrations | `model/Bus.java`, `service/LoginService.java`, `service/BusService.java` |
-| **Unit 4** | **Lambda & Streams** | Stream filtering, predicate matching, sorting, and attendance percentage aggregations | `service/BusService.java`, `service/AttendanceService.java` |
-| **Unit 4** | **File Handling** | CSV attendance export via `BufferedWriter`/`FileWriter`, formatted text grievance logs via `PrintWriter`, and audit logging | `service/DataPersistenceService.java` |
-| **Unit 4** | **Object Serialization** | Full fleet binary snapshot persistence using `ObjectOutputStream` & `ObjectInputStream` (`Serializable`) | `service/DataPersistenceService.java`, `gui/AdminDashboard.java` |
-| **Unit 5** | **JDBC & MySQL** | Relational schema `transport.sql`, `DBConnection.java` with prepared statements (`PreparedStatement`, `ResultSet`, `DriverManager`) and automatic resilient local fallback | `database/DBConnection.java`, `database/transport.sql` |
-| **Unit 5** | **AWT / Swing GUI** | Modern graphical user interfaces: `LoginFrame`, `StudentDashboard`, `AdminDashboard`, `DriverDashboard` | `gui/*.java` |
-| **Unit 5** | **Event Handling** | Action listeners, mouse hover events, table selection models, modal dialogs | `gui/*.java` |
-
----
-
 ## 🏛️ Project Architecture & Directory Layout
 
 ```text
